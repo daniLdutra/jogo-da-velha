@@ -34,3 +34,13 @@ for (let i = 0; i < boxes.length; i++) {
     }
   });
 }
+// ver quem está jogando
+function checkEl(player1, player2) {
+  if (player1 == player2) {
+    el = x;
+  } else {
+    el = o;
+  }
+
+  return el;
+}
