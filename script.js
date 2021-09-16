@@ -218,3 +218,12 @@ function declareWinner(winner) {
   } else {
     msg = "Deu velha!";
   }
+
+  // exibe mensagem
+  messageText.innerHTML = msg;
+  messageContainer.classList.remove("hide");
+
+  // esconde mensagem na tela
+  setTimeout(function () {
+    messageContainer.classList.add("hide");
+  }, 3000);
