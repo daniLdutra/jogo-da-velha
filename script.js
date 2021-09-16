@@ -227,3 +227,15 @@ function declareWinner(winner) {
   setTimeout(function () {
     messageContainer.classList.add("hide");
   }, 3000);
+
+  // zerar placar
+  player1 = 0;
+  player2 = 0;
+
+  //remove x e o
+
+  let boxesToRemove = document.querySelectorAll(".box div");
+  boxesToRemove.forEach((box) => {
+    box.parentNode.removeChild(box);
+  });
+}
