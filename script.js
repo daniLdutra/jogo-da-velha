@@ -34,6 +34,21 @@ for (let i = 0; i < boxes.length; i++) {
     }
   });
 }
+//evento para saber se são 2 players ou IA
+
+for (let i = 0; i < buttons.length; i += 1) {
+  buttons[i].addEventListener("click", function (event) {
+    secondPlayer = event.target;
+
+    for (let j = 0; j < buttons.length; j++) {
+      buttons[j].style.display = "none";
+    }
+
+    setTimeout(function () {
+      container.classList.remove("hide");
+    }, 500);
+  });
+}
 // ver quem está jogando
 function checkEl(player1, player2) {
   if (player1 == player2) {
