@@ -202,3 +202,19 @@ function checkWinCondition() {
     declareWinner("deu velha");
   }
 }
+
+// limpa o jogo e atualiza placar
+function declareWinner(winner) {
+  let scoreboardX = document.querySelector("#scoreboard-1");
+  let scoreboardY = document.querySelector("#scoreboard-2");
+  let msg = "";
+
+  if (winner == "x") {
+    scoreboardX.textContent = parseInt(scoreboardX.textContent) + 1;
+    msg = "O Jogador 1 venceu";
+  } else if (winner == "o") {
+    scoreboardY.textContent = parseInt(scoreboardY.textContent) + 1;
+    msg = "O Jogador 2 venceu";
+  } else {
+    msg = "Deu velha!";
+  }
